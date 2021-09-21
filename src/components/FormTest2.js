@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 
-//受控組件
+//受控組件+Currying
 export default class FormTest2 extends Component {
     state = {
         userName: "",
         password: "",
     };
 
-    saveUserName = (event) => {
-        this.setState({ userName: event.target.value });
-    };
-    savePassword = (event) => {
-        this.setState({ password: event.target.value });
+    saveFormData = (dataType) => {
+        return (event) => {
+            this.setState({ [dataType]: event.target.value });
+        };
     };
     handleSubmit = (event) => {
         event.preventDefault();
@@ -24,13 +23,13 @@ export default class FormTest2 extends Component {
                 <form onSubmit={this.handleSubmit}>
                     Username:{" "}
                     <input
-                        onChange={this.saveUserName}
+                        onChange={this.saveFormData("userName")}
                         type="text"
                         name="username"
                     />
                     Password:{" "}
                     <input
-                        onChange={this.savePassword}
+                        onChange={this.saveFormData("password")}
                         type="password"
                         name="password"
                     />
