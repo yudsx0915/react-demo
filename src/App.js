@@ -6,7 +6,7 @@ import ButtonTest3 from "./components/ButtonTest3";
 import ButtonTest2 from "./components/ButtonTest2";
 
 function App() {
-    const param = { name: "Corey", age: 35 };
+    const param = { name: "Corey", age: 20 };
     const param2 = { name: "Doreen" };
     return (
         <div className="App">
