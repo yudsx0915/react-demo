@@ -5,6 +5,8 @@ import LifeCycle from "./components/LifeCycle";
 import LifeCycleNew from "./components/LifeCycleNew";
 import Person from "./components/Person";
 import Weather2 from "./components/Weather2";
+import PubSub from "pubsub-js";
+import PubSubTest from "./components/PubSubTest";
 
 function App2() {
     const param = { name: "Corey", age: 20 };

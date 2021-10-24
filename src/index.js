@@ -1,14 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import App2 from "./App2";
 import AxiosApp from "./AxiosApp";
+import RouterApp from "./RouterApp";
 
 ReactDOM.render(
     <React.StrictMode>
-        <AxiosApp />
+        <BrowserRouter>
+            <RouterApp />
+        </BrowserRouter>
     </React.StrictMode>,
     document.getElementById("root")
 );
